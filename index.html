@@ -8,7 +8,7 @@
   <script src="js/script.js" defer></script>
 </head>
 <body>
-    
+
  <header class="site-header">
   <nav class="nav">
 
@@ -27,25 +27,37 @@
 </header>
 
   <main>
-    <section class="stage active" id="start">
-      <h1>SecurityCheck</h1>
-      <p>Kan du gennemskue en falsk studiemail?</p>
-      <button class="btn" data-next="mail">Start scenarie</button>
-    </section>
+   <section class="stage active" id="start">
+  <div class="start-content">
+    <h1>Security Check</h1>
+    <p> Kan du gennemskue en falsk studiemail?</p>
 
-    <section class="stage" id="mail">
-      <h2>Du har fået en ny mail</h2>
-      <div class="mail-box">
-        <p><strong>Fra:</strong> studieservice@iba-support.com</p>
-        <p><strong>Emne:</strong> Din studieadgang udløber i dag</p>
-        <p>Hej studerende. Din adgang til skolens systemer udløber i dag. Klik på linket herunder for at bekræfte din konto.</p>
-        <p><strong>www.iba-login-support.com</strong></p>
-      </div>
+    <button class="btn" data-next="mail">Start scenarie</button>
 
+  </div>
+</section>
+
+   <section class="stage" id="mail">
+  <div class="mail-content">
+    <h2>Du har fået en ny mail</h2>
+
+    <div class="mail-box">
+      <p><strong>Fra:</strong> studieservice@iba-support.com</p>
+      <p><strong>Emne:</strong> Din studieadgang udløber i dag</p>
+      <p>
+        Hej studerende. Din adgang til skolens systemer udløber i dag.
+        Klik på linket herunder for at bekræfte din konto.
+      </p>
+      <p><strong>www.iba-login-support.com</strong></p>
+    </div>
+
+    <div class="choice-buttons">
       <button class="btn" data-next="bad-ending">Klik på linket</button>
       <button class="btn" data-next="check-sender">Tjek afsenderen</button>
       <button class="btn" data-next="neutral-ending">Ignorér mailen</button>
-    </section>
+    </div>
+  </div>
+</section>
 
     <section class="stage" id="check-sender">
       <h2>Du tjekker afsenderen</h2>
