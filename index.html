@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecurityCheck</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+    
+ <header class="site-header">
+  <nav class="nav">
+
+    <a href="index.html" class="logo-link">
+      <img src="img/SC logo 2.png" alt="SecurityCheck logo">
+      <p>SecurityCheck</p>
+    </a>
+
+    <ul class="nav-list">
+      <li>
+        <img src="img/menu.png" alt="Menu">
+      </li>
+    </ul>
+
+  </nav>
+</header>
+
+  <main>
+    <section class="stage active" id="start">
+      <h1>SecurityCheck</h1>
+      <p>Kan du gennemskue en falsk studiemail?</p>
+      <button class="btn" data-next="mail">Start scenarie</button>
+    </section>
+
+    <section class="stage" id="mail">
+      <h2>Du har fået en ny mail</h2>
+      <div class="mail-box">
+        <p><strong>Fra:</strong> studieservice@iba-support.com</p>
+        <p><strong>Emne:</strong> Din studieadgang udløber i dag</p>
+        <p>Hej studerende. Din adgang til skolens systemer udløber i dag. Klik på linket herunder for at bekræfte din konto.</p>
+        <p><strong>www.iba-login-support.com</strong></p>
+      </div>
+
+      <button class="btn" data-next="bad-ending">Klik på linket</button>
+      <button class="btn" data-next="check-sender">Tjek afsenderen</button>
+      <button class="btn" data-next="neutral-ending">Ignorér mailen</button>
+    </section>
+
+    <section class="stage" id="check-sender">
+      <h2>Du tjekker afsenderen</h2>
+      <p>Du opdager, at mailen ikke kommer fra skolens rigtige domæne. Den ser mistænkelig ud.</p>
+
+      <button class="btn" data-next="good-ending">Rapportér mailen</button>
+      <button class="btn" data-next="okay-ending">Slet mailen</button>
+    </section>
+
+    <section class="stage" id="bad-ending">
+      <h2>Uheldigt valg</h2>
+      <p>Du klikkede på linket og risikerede at give dine loginoplysninger væk.</p>
+      <button class="btn" data-next="start">Prøv igen</button>
+    </section>
+
+    <section class="stage" id="neutral-ending">
+      <h2>Du undgik risikoen</h2>
+      <p>Du klikkede ikke på linket, men du fik heller ikke undersøgt, om mailen var farlig.</p>
+      <button class="btn" data-next="start">Prøv igen</button>
+    </section>
+
+    <section class="stage" id="okay-ending">
+      <h2>Fint valg</h2>
+      <p>Du slettede mailen og undgik selv problemet.</p>
+      <button class="btn" data-next="start">Prøv igen</button>
+    </section>
+
+    <section class="stage" id="good-ending">
+      <h2>Godt arbejde!</h2>
+      <p>Du rapporterede mailen og hjalp med at beskytte andre studerende.</p>
+      <button class="btn" data-next="start">Prøv igen</button>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,117 @@
+@import "partial";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header {
+  background-color: $nav-color;
+  padding: 1rem 2rem;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+
+    img {
+      width: 40px; 
+      height: auto;
+      display: block;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $text-color;
+    }
+  }
+
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      img {
+        width: 40px; 
+        height: auto;
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+  /* Navigation (burger) */
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      a {
+        display: block;
+
+        img {
+          width: 30px;
+          height: auto;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+/* Body */
+body {
+  font-family: $font;
+  background-color: $bg-color;
+  color: $text-color;
+
+  main {
+    @include flex(center, center);
+    min-height: 100vh;
+    padding: 1rem;
+  }
+}
+
+/* Stage */
+.stage {
+  display: none;
+  background-color: $nav-color;
+  color: $text-color;
+  max-width: 700px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 20px;
+
+  &.active {
+    display: block;
+  }
+}
+
+/* Mail */
+.mail-box {
+  background-color: $bg-color;
+  border-left: 5px solid red;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Knap */
+.btn {
+  @include btn();
+
+  display: block;
+  width: 100%;
+  margin-top: 0.75rem;
+}
