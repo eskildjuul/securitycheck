@@ -6,24 +6,33 @@
   padding: 0;
 }
 
+body {
+  font-family: $font-main;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+main {
+  @include flex(center, center);
+  min-height: 100vh;
+  padding: 1rem;
+}
+
 .site-header {
   background-color: $nav-color;
   padding: 1rem 2rem;
 
   .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(space-between, center);
   }
 
   .logo-link {
-    display: flex;
-    align-items: center;
+    @include flex(flex-start, center);
     gap: 0.5rem;
     text-decoration: none;
 
     img {
-      width: 40px; 
+      width: 40px;
       height: auto;
       display: block;
     }
@@ -43,7 +52,7 @@
 
     li {
       img {
-        width: 40px; 
+        width: 40px;
         height: auto;
         display: block;
         cursor: pointer;
@@ -51,40 +60,10 @@
     }
   }
 }
-  .nav-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      a {
-        display: block;
-
-        img {
-          width: 50px;
-          height: auto;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-
-/* Body */
-body {
-  font-family: $font;
-  background-color: $bg-color;
-  color: $text-color;
-
-  main {
-    @include flex(center, center);
-    min-height: 100vh;
-    padding: 1rem;
-  }
-}
 
 .stage {
   display: none;
-  background-color: $nav-color;
+  background-color: $card-color;
   color: $text-color;
   max-width: 700px;
   width: 100%;
@@ -96,13 +75,21 @@ body {
   }
 }
 
+.btn {
+  @include btn;
+  display: block;
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
 #start {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(center, center);
   min-height: 100vh;
   padding: 2rem;
   text-align: center;
+  background: none;
+  max-width: none;
+  border-radius: 0;
 
   .start-content {
     max-width: 500px;
@@ -121,26 +108,112 @@ body {
   }
 
   .btn {
-    width: 100%;
     max-width: 250px;
     margin: 0 auto;
   }
 }
 
+#mail {
+  text-align: left;
 
-/* Mail */
-.mail-box {
-  background-color: $bg-color;
-  border-left: 5px solid red;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  .mail-content {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .mail-box {
+    background-color: $mail-bg;
+    border-left: 5px solid $mail-border;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+      word-break: break-word;
+    }
+  }
+
+  .choice-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
 }
 
-/* Knap */
-.btn {
-  @include btn();
+#check-sender {
+  text-align: center;
 
-  display: block;
-  width: 100%;
-  margin-top: 0.75rem;
+  .check-content {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .choice-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
 }
+
+#bad-ending,
+#neutral-ending,
+#okay-ending,
+#good-ending {
+  text-align: center;
+
+  .ending-content {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+}
+
+

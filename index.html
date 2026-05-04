@@ -59,37 +59,59 @@
   </div>
 </section>
 
-    <section class="stage" id="check-sender">
-      <h2>Du tjekker afsenderen</h2>
-      <p>Du opdager, at mailen ikke kommer fra skolens rigtige domæne. Den ser mistænkelig ud.</p>
+   <section class="stage" id="check-sender">
+  <div class="check-content">
+    <h2>Du tjekker afsenderen</h2>
 
+    <p> Du opdager, at mailen ikke kommer fra skolens rigtige domæne.Den ser mistænkelig ud.</p>
+
+    <div class="choice-buttons">
       <button class="btn" data-next="good-ending">Rapportér mailen</button>
       <button class="btn" data-next="okay-ending">Slet mailen</button>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="stage" id="bad-ending">
-      <h2>Uheldigt valg</h2>
-      <p>Du klikkede på linket og risikerede at give dine loginoplysninger væk.</p>
-      <button class="btn" data-next="start">Prøv igen</button>
-    </section>
+<section class="stage" id="bad-ending">
+  <div class="ending-content">
+    <h2>Uheldigt valg</h2>
 
-    <section class="stage" id="neutral-ending">
-      <h2>Du undgik risikoen</h2>
-      <p>Du klikkede ikke på linket, men du fik heller ikke undersøgt, om mailen var farlig.</p>
-      <button class="btn" data-next="start">Prøv igen</button>
-    </section>
+    <p>Du klikkede på linket og risikerede at give dine loginoplysninger væk.</p>
 
-    <section class="stage" id="okay-ending">
-      <h2>Fint valg</h2>
-      <p>Du slettede mailen og undgik selv problemet.</p>
-      <button class="btn" data-next="start">Prøv igen</button>
-    </section>
+    <button class="btn" data-next="start">Prøv igen</button>
+  </div>
+</section>
 
-    <section class="stage" id="good-ending">
-      <h2>Godt arbejde!</h2>
-      <p>Du rapporterede mailen og hjalp med at beskytte andre studerende.</p>
-      <button class="btn" data-next="start">Prøv igen</button>
-    </section>
+<section class="stage" id="neutral-ending">
+  <div class="ending-content">
+    <h2>Du undgik risikoen</h2>
+
+    <p>Du klikkede ikke på linket, men du fik heller ikke undersøgt, om mailen var farlig.</p>
+
+    <button class="btn" data-next="start">Prøv igen</button>
+  </div>
+</section>
+
+<section class="stage" id="okay-ending">
+  <div class="ending-content">
+    <h2>Fint valg</h2>
+
+    <p>Du slettede mailen og undgik selv problemet.</p>
+
+    <button class="btn" data-next="start">Prøv igen</button>
+  </div>
+</section>
+
+<section class="stage" id="good-ending">
+  <div class="ending-content">
+    <h2>Godt arbejde!</h2>
+
+    <p>Du rapporterede mailen og hjalp med at beskytte andre studerende.</p>
+
+    <button class="btn" data-next="start">Prøv igen</button>
+  </div>
+</section>
+
   </main>
 </body>
 </html>
