@@ -67,7 +67,7 @@ main {
   color: $text-color;
   max-width: 700px;
   width: 100%;
-  padding: 2rem;
+  padding: 5em;
   border-radius: 20px;
 
   &.active {
@@ -79,32 +79,27 @@ main {
   @include btn;
   display: block;
   width: 100%;
-  margin-top: 0.75rem;
+  margin-top: 0.75em;
 }
 
 #start {
-  @include flex(center, center);
-  min-height: 100vh;
-  padding: 2rem;
   text-align: center;
-  background: none;
-  max-width: none;
-  border-radius: 0;
 
   .start-content {
     max-width: 500px;
     width: 100%;
+    margin: 0 auto;
   }
 
   h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1.1em;
     line-height: 1.5;
-    margin-bottom: 2rem;
+    margin-bottom: 1em;
   }
 
   .btn {
@@ -121,21 +116,25 @@ main {
   }
 
   h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.8em;
+    margin-bottom: 1.5em;
     text-align: center;
   }
 
   .mail-box {
     background-color: $mail-bg;
     border-left: 5px solid $mail-border;
-    padding: 1.5rem;
+    padding: 1.5em;
     border-radius: 12px;
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
 
     p {
-      margin-bottom: 1rem;
+      margin-bottom: 1em;
       line-height: 1.5;
+    }
+
+    a{
+        text-decoration: underline;
     }
 
     p:last-child {
@@ -147,7 +146,7 @@ main {
   .choice-buttons {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1em;
   }
 
   .btn {
@@ -170,15 +169,15 @@ main {
   }
 
   p {
-    font-size: 1.05rem;
+    font-size: 1.05em;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
   }
 
   .choice-buttons {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1em;
   }
 
   .btn {
@@ -199,14 +198,14 @@ main {
   }
 
   h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.8em;
+    margin-bottom: 1.5em;
   }
 
   p {
-    font-size: 1.05rem;
+    font-size: 1.05em;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
   }
 
   .btn {
