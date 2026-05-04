@@ -27,10 +27,11 @@
 </header>
 
   <main>
+
    <section class="stage active" id="start">
   <div class="start-content">
     <h1>Security Check</h1>
-    <p> Kan du gennemskue en falsk studiemail?</p>
+    <p>Hvor opmærksom er du i din digitale hverdag?</p>
 
     <button class="btn" data-next="mail">Start scenarie</button>
 
@@ -38,18 +39,39 @@
 </section>
 
    <section class="stage" id="mail">
-  <div class="mail-content">
+<div class="mail-content">
     <h2>Du har fået en ny mail</h2>
 
     <div class="mail-box">
-      <p><strong>Fra:</strong> studieservice@iba-support.com</p>
-      <p><strong>Emne:</strong> Din studieadgang udløber i dag</p>
-      <p>
-        Kære studerende. Din adgang til skolens systemer udløber i dag.
-        Klik på linket herunder for at bekræfte din konto.
-      </p>
-      <a href="#">www.iba-login-support.com</a>
-    </div>
+  <p><strong>Fra:</strong> studieservice@iba-support.com</p>
+  <p><strong>Emne:</strong> Vigtig information om adgang til studieportalen</p>
+
+  <p>Kære studerende,</p>
+
+  <p>
+    Vi er i gang med en opdatering af adgang og sikkerhed i studieportalen.
+    I den forbindelse skal alle studerende bekræfte deres brugeroplysninger,
+    så adgangen til skolens systemer kan fortsætte uden afbrydelser.
+  </p>
+
+  <p>
+    Vi kan se, at din konto endnu ikke er blevet bekræftet. Hvis du ikke
+    gennemfører bekræftelsen i dag, kan det medføre midlertidig begrænsning
+    af adgang til studieportalen, mail og øvrige studierelaterede systemer.
+  </p>
+
+  <p>
+    Bekræft din konto her:
+    <br>
+    <a href="#">www.iba-login-support.com</a>
+  </p>
+
+  <p>
+    Har du allerede bekræftet din konto, kan du se bort fra denne besked.
+  </p>
+
+  <p>Med venlig hilsen<br>Studieservice</p>
+</div>
 
     <div class="choice-buttons">
       <button class="btn" data-next="bad-ending">Klik på linket</button>
@@ -60,10 +82,11 @@
 </section>
 
    <section class="stage" id="check-sender">
+
   <div class="check-content">
     <h2>Du tjekker afsenderen</h2>
 
-    <p> Du opdager, at mailen ikke kommer fra skolens rigtige domæne.Den ser mistænkelig ud.</p>
+    <p> Du opdager, at mailen ikke kommer fra skolens rigtige domæne. Den ser mistænkelig ud.</p>
 
     <div class="choice-buttons">
       <button class="btn" data-next="good-ending">Rapportér mailen</button>
@@ -103,6 +126,7 @@
 </section>
 
 <section class="stage" id="good-ending">
+
   <div class="ending-content">
     <h2>Godt arbejde!</h2>
 
@@ -113,5 +137,8 @@
 </section>
 
   </main>
+
+
+
 </body>
 </html>
